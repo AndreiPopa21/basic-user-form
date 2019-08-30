@@ -1,7 +1,45 @@
 import React, { Component } from 'react'
 import '../styles/PersonalDetails.css'
+import { throwStatement, thisTypeAnnotation } from '@babel/types';
 
 class PersonalDetails extends Component {
+
+    state={
+        city: this.props.value.city,
+        occupation: this.props.value.occupation,
+        bio: this.props.value.bio
+    }
+
+    onChangeCity = (event) => {
+        event.preventDefault()
+        const city = event.target.value
+        this.setState({
+            city: city
+        })
+    }
+
+    onChangeOccupation = (event) => {
+        event.preventDefault()
+        const occupation = event.target.value
+        this.setState({
+            occupation: occupation
+        })
+    }
+
+    onChangeBio = (event) => {
+        event.preventDefault()
+        const bio = event.target.value
+        this.setState({
+            bio: bio
+        })
+    }
+
+    handleSubmit = (event) =>{
+        event.preventDefault();
+        const data = {city: this.state.city, occupation: this.state.occupation, bio: this.state.bio}
+        this.props.actions.personalDetails(data)
+    }
+
     render() {
         return (
             <div className="PersonalDetails">
@@ -20,21 +58,21 @@ class PersonalDetails extends Component {
                 <form className="form-container">
                     <label>
                         <p className="form-text">Enter your city name:</p>
-                        <input type="text" spellCheck="false"/>
+                        <input type="text" spellCheck="false" value={this.state.city} onChange={this.onChangeCity}/>
                     </label>
                     <label>
                         <p className="form-text">Enter your occupation:</p>
-                        <input type="text" spellCheck="false"/>
+                        <input type="text" spellCheck="false" value={this.state.occupation} onChange={this.onChangeOccupation}/>
                     </label>
                     <label>
                         <p className="form-text">Enter your bio:</p>
-                        <textarea rows="5" maxLength="5"></textarea>
+                        <textarea rows="5" value={this.state.bio} onChange={this.onChangeBio}></textarea>
                     </label>
                     <label>
-                        <input type="submit" value="Continue"/>
+                        <input type="submit" value="Continue" onClick={this.handleSubmit}/>
                     </label>
                     <label>
-                        <input type="button" value="Back"/>
+                        <input type="button" value="Back" onClick={this.props.previous}/>
                     </label>
                 </form>  
             </div>

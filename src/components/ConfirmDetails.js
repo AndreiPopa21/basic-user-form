@@ -42,31 +42,31 @@ class ConfirmDetails extends Component {
                 <div className="details-container">
                     <div className="singleline-detail-container">
                         <p className="details-label">First Name:</p>
-                        <p className="singleline-detail">Stefan</p>
+                        <p className="singleline-detail">{this.props.value.firstName}</p>
                     </div>
                     <div className="singleline-detail-container">
                         <p className="details-label">Second Name:</p>
-                        <p className="singleline-detail">Popa</p>
+                        <p className="singleline-detail">{this.props.value.secondName}</p>
                     </div>
                     <div className="singleline-detail-container">
                         <p className="details-label">Email:</p>
-                        <p className="singleline-detail">andrei.popa2199@gmail.com</p>
+                        <p className="singleline-detail">{this.props.value.email}</p>
                     </div>
                     <div className="singleline-detail-container">
                         <p className="details-label">City Name:</p>
-                        <p className="singleline-detail">Braila</p>
+                        <p className="singleline-detail">{this.props.value.city}</p>
                     </div>
                     <div className="singleline-detail-container">
                         <p className="details-label">Occupation:</p>
-                        <p className="singleline-detail">Student</p>
+                        <p className="singleline-detail">{this.props.value.occupation}</p>
                     </div>
                     <div className="bio-container">
-                        <p className="multiline-detail">Braila dasd aaaa sdaas gasasgg  sdada a sdasd adasddasd asdad ad ad ad a das d asd asd as da sd as da sd asd as d AHSHnna asdasd</p>
+                        <p className="multiline-detail">{this.props.value.bio}</p>
                     </div>
                 </div>
                 <form className="controls-container">
                     <input type="submit" value="Confirm" onClick={this.confirmData}/>
-                    <input type="button" value="Back" />
+                    <input type="button" value="Back" onClick={this.props.previous} />
                 </form>
             </div>
         )

@@ -2,6 +2,43 @@ import React, { Component } from 'react'
 import '../styles/UserDetails.css'
 import create from '../create.svg'
 class UserDetails extends Component {
+
+    state={
+        firstName: this.props.value.firstName,
+        secondName: this.props.value.secondName,
+        email: this.props.value.email
+    }
+
+    onChangeFirstName= (event) =>{
+        event.preventDefault();
+        const first = event.target.value;
+        this.setState({
+            firstName: first
+        })
+    }
+
+    onChangeSecondName= (event) =>{
+        event.preventDefault();
+        const second = event.target.value;
+        this.setState({
+            secondName: second
+        })
+    }
+
+    onChangeEmail= (event) =>{
+        event.preventDefault();
+        const em = event.target.value;
+        this.setState({
+            email: em
+        })
+    }
+
+    handleSubmit = (event) =>{
+        event.preventDefault()
+        const data = {firstName: this.state.firstName, secondName : this.state.secondName, email: this.state.email};
+        this.props.actions.userDetails(data)
+    }
+
     render() {
         return (
             <div className="UserDetails">
@@ -20,18 +57,18 @@ class UserDetails extends Component {
                 <form className="form-container">
                     <label>
                         <p className="form-text">Enter your first name:</p>
-                        <input type="text" spellCheck="false"/>
+                        <input type="text" spellCheck="false" value={this.state.firstName} onChange={this.onChangeFirstName}/>
                     </label>
                     <label>
                         <p className="form-text">Enter your second name:</p>
-                        <input type="text" spellCheck="false"/>
+                        <input type="text" spellCheck="false" value={this.state.secondName} onChange={this.onChangeSecondName}/>
                     </label>
                     <label>
                         <p className="form-text">Enter your email:</p>
-                        <input type="email" spellCheck="false"/>
+                        <input type="email" spellCheck="false" value={this.state.email} onChange={this.onChangeEmail}/>
                     </label>
                     <label>
-                        <input type="submit" value="Continue"/>
+                        <input type="submit" value="Continue" onClick={this.handleSubmit}/>
                     </label>
                 </form>
             </div>
