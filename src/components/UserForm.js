@@ -6,7 +6,7 @@ import ConfirmDetails from './ConfirmDetails'
 class UserForm extends Component {
 
     state={
-        step: 3,
+        step: 1,
         firstName: "",
         secondName: "",
         email: "",

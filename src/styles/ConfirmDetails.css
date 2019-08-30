@@ -157,3 +157,32 @@ input[type=button] {
 input[type=button]:hover {
     color: rgb(236, 222, 222);
 }
+
+
+
+
+
+
+
+
+
+
+.confirm-image{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

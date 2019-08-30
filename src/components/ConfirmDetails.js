@@ -1,7 +1,29 @@
 import React, { Component } from 'react'
 import '../styles/ConfirmDetails.css'
+import confirmedImage from '../confirmed-signed.png'
 class ConfirmDetails extends Component {
+
+    state={
+        confirmed: "false"
+    };
+
+    confirmData = () => {
+        const {confirmed} = this.state
+        this.setState({ 
+            confirmed: !confirmed
+        })
+    }
+
     render() {
+
+        if(!this.state.confirmed){
+            return(
+                <div>
+                    <img className="confirm-image" src={confirmedImage} alt="confirm"/>
+                </div>
+            )
+        }
+
         return (
             <div className="ConfirmDetails">
                 <div className="form-header">
@@ -42,8 +64,8 @@ class ConfirmDetails extends Component {
                     </div>
                 </div>
                 <form className="controls-container">
-                    <input type="submit" value="Confirm"/>
-                    <input type="button" value="Back"/>
+                    <input type="submit" value="Confirm" onClick={this.confirmData}/>
+                    <input type="button" value="Back" />
                 </form>
             </div>
         )
