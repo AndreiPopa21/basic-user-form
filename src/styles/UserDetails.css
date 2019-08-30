@@ -1,0 +1,134 @@
+/* form main div sections */
+
+.UserDetails{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 50vh;
+    width: 22vw;
+    background-color: rgb(75, 124, 196);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.form-header{
+    height: 10vh;
+    width: 22vw;
+    border-radius: 10px;
+    background-color: rgb(41, 89, 160);
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* ------------------------------------------ */
+
+
+
+
+
+
+
+
+/* Form Header*/
+
+.form-header-description{
+    color: white;
+    margin-left: 20px;
+}
+
+.form-register-now{
+    font-size: 28px;
+    padding-top: 10px;
+}
+
+.form-register-fill{
+    font-size: 22px;
+    padding-top: 10px;
+}
+
+p{
+    margin:0;
+}
+
+.image-svg{
+    margin-right: 20px;
+    padding-top: 2.5vh;
+}
+
+
+/* ------------------------------------------ */
+
+
+
+
+
+
+
+
+
+
+
+/* Form Container */
+
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.form-text{
+    font-size: 22px;
+    color:white;
+    margin-bottom: 5px;
+}
+
+label{
+    margin-top:10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+/* -------------------------------------------- */
+
+
+
+
+
+
+
+
+/* Input type styles */
+
+input[type=text]
+{
+    height: 3vh;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    background-clip: border-box;
+    border: 3px solid white;
+    outline: none;
+    font-size: 22px;
+}
+
+input[type=submit] {
+    padding:5px 5px; 
+    background:#00C2FF; 
+    border:1px solid #00C2FF;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 8px;
+    height: 7vh;
+    font-size: 30px;
+    color: white;
+    outline: none;
+}
