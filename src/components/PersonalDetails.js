@@ -28,7 +28,7 @@ class PersonalDetails extends Component {
                     </label>
                     <label>
                         <p className="form-text">Enter your bio:</p>
-                        <textarea rows="5"></textarea>
+                        <textarea rows="5" maxLength="5"></textarea>
                     </label>
                     <label>
                         <input type="submit" value="Continue"/>
