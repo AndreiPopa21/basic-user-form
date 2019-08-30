@@ -18,8 +18,9 @@ class ConfirmDetails extends Component {
 
         if(!this.state.confirmed){
             return(
-                <div>
+                <div className="confirmed-data-container">
                     <img className="confirm-image" src={confirmedImage} alt="confirm"/>
+                    <p className="congratulations-text">Congratulations!</p>
                 </div>
             )
         }

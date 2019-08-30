@@ -6,7 +6,7 @@ import ConfirmDetails from './ConfirmDetails'
 class UserForm extends Component {
 
     state={
-        step: 1,
+        step: 3,
         firstName: "",
         secondName: "",
         email: "",
@@ -14,6 +14,24 @@ class UserForm extends Component {
         occupation: "",
         bio: ""
     }
+
+    
+    nextStep = () =>{
+        const {step} = this.state;
+        console.log("Go next step");
+        this.setState({
+            step: step + 1
+        })
+    }
+    
+    prevStep = () =>{
+        const {step} = this.state;
+        console.log("Go previous step");
+        this.setState({
+            step: step - 1
+        })
+    }
+
 
     render() {
 
