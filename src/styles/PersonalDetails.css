@@ -1,11 +1,9 @@
-/* form main div sections */
-
-.UserDetails{
+.PersonalDetails{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    height: 50vh;
+    height: 65vh;
     width: 22vw;
     background-color: rgb(75, 124, 196);
     border-radius: 10px;
@@ -22,11 +20,6 @@
     display: flex;
     justify-content: space-between;
 }
-
-
-/* ------------------------------------------ */
-
-
 
 
 
@@ -61,14 +54,6 @@ p{
 
 
 /* ------------------------------------------ */
-
-
-
-
-
-
-
-
 
 
 
@@ -120,10 +105,7 @@ input[type=text]
     font-size: 22px;
 }
 
-
-input[type=email]
-{
-    height: 3vh;
+textarea{
     padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -132,6 +114,8 @@ input[type=email]
     border: 3px solid white;
     outline: none;
     font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    resize: none;
 }
 
 
@@ -149,6 +133,24 @@ input[type=submit] {
     box-shadow: 0 5px 5px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.24);
 }
 
+input[type=button] {
+ 
+    cursor:pointer;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    height: 4vh;
+    font-size: 20px;
+    color: white;
+    outline: none;
+    border: none;
+    overflow: hidden;
+    text-decoration: underline;
+}
+
+input[type=button]:hover {
+    color: rgb(236, 222, 222);
+}
+
 input[type=submit]:hover {
     box-shadow: 0 7px 5px rgba(0,0,0,0.25), 0 1px 5px rgba(0,0,0,0.22);
-  }
+}

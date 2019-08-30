@@ -28,10 +28,10 @@ class UserDetails extends Component {
                     </label>
                     <label>
                         <p className="form-text">Enter your email:</p>
-                        <input type="text" spellCheck="false"/>
+                        <input type="email" spellCheck="false"/>
                     </label>
                     <label>
-                        <input type="submit" value="Submit"/>
+                        <input type="submit" value="Continue"/>
                     </label>
                 </form>
             </div>

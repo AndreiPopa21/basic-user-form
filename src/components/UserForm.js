@@ -6,7 +6,7 @@ import ConfirmDetails from './ConfirmDetails'
 class UserForm extends Component {
 
     state={
-        step: 1,
+        step: 2,
         firstName: "",
         secondName: "",
         email: "",
@@ -30,7 +30,7 @@ class UserForm extends Component {
             case 2:
                 return(
                     <div>
-                        Step 2
+                        <PersonalDetails/>
                     </div>
                 );
             case 3:
