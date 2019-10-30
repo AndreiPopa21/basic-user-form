@@ -3,6 +3,8 @@
 
 Link to the screenshots folder: [link](https://github.com/AndreiPopa21/basic-user-form/tree/master/src/png)  
 
+![alt text](https://github.com/AndreiPopa21/basic-user-form/blob/master/src/png/first-form-screen.png )
+
 ## App info
 
 ### Author
